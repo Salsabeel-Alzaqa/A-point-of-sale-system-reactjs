@@ -159,34 +159,6 @@
       "id": 48520
     }
   ],
-  "carts": [
-    {
-      "name": "chocolate",
-      "id": 1,
-      "price": "10",
-      "quantity": "7",
-      "total": 70
-    },
-    {
-      "name": "steak",
-      "id": 2,
-      "price": "100",
-      "quantity": "6",
-      "total": 600
-    },
-    {
-      "name": "dooood",
-      "id": 4,
-      "price": "27",
-      "quantity": "2",
-      "total": 54
-    },
-    {
-      "name": "Home",
-      "id": 3,
-      "price": "1000",
-      "quantity": "1",
-      "total": 1000
-    }
-  ]
+  "carts":
+  []
 }

@@ -25,6 +25,7 @@ img{
   width: 40%;
   height: 20%;
 }
+/* split */
 .left,.right {
   height: 100%;
   position: fixed;
@@ -35,36 +36,15 @@ img{
   left: 0;
   width: 70%;
   text-align: center;
-  background-color: #111;
+  background-color:rgb(8, 8, 8);
 }
 .right {
   right: 0;
   width: 30%;
   background-color: rgb(56, 1, 44);
 }
-/*
-.centered {
-  top: 60%;
-  left: 40%;
-  transform: translate(-40%, -60%);
-  text-align: center;
-}
-.centered img {
-  width: 150px;
-  border-radius: 50%;
-}
-/*.flex-child {
-  flex: 1;
-}  
-.flex-child{
-  width:60%;
-  height:100%;
-  background-color: #111;
-  text-align: center;
-} */
-.modal{
-  padding-top: 10px;
-}
+/* end */
+/* search bar */
  .search input
 {
     width:90%;
@@ -73,26 +53,7 @@ img{
     border-radius:25px;
     border-color:black;
 }
-/* .navbar{
-  display: flex;
-  justify-content: space-between;
-  color: bisque;
-  background-color: #282c34;
-}
-.navlink{
-  display:flex ;
-  justify-content: space-evenly;
-  word-spacing: 10px;
-}
-.link{
-  list-style-type: none; 
-  text-decoration: none;
-  font-size: large;
-  font-weight: 400;
-  margin-left: 10px;
-  padding: 10px;
-  color:bisque;
-}*/
+/* end */
 
 /* for navbar */
 .navbar{
@@ -135,7 +96,6 @@ table {
   margin: auto;
   font-family: Lucida Console;
 }
-
 .item img{
   width: 100px;
 }
@@ -147,13 +107,41 @@ table {
   border-color:rgba(8, 30, 224, 0.185);
   border-style:solid;
 }
-
 .item ul{
   list-style-type: none; 
 }
+/* end */
 
+/* footer */
 footer{
   margin: auto;
   width: 20%;
   padding: 10px;
+}
+/* end */ 
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(8, 30, 224, 0.185);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background:rgba(8, 26, 184, 0.692);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:rgba(8, 30, 224, 0.185);
+}
+/* end */
+/* payment */
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
 }

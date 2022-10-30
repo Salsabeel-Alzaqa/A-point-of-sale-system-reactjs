@@ -71,7 +71,9 @@ const POS = () => {
       </tbody>
     </table>      
 </div>
+<div className="sticky">
 <p>SubTotal:{summ()}</p>
+</div>
 </div> 
     );
   }

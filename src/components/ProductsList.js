@@ -19,7 +19,7 @@ const ProductsList = () => {
        "quantity":quantity,
        "total":item.price*quantity
     }
-       fetch("http://localhost:8000/carts",{
+       fetch("http://localhost:8000/carts/1",{
         method:"POST",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(cart)
