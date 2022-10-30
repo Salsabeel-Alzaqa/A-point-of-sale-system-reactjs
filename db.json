@@ -1,0 +1,188 @@
+{
+  "products": [
+    {
+      "code": "12354",
+      "name": "chocolate",
+      "category": "sweet",
+      "price": "10",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 1
+    },
+    {
+      "code": "54545",
+      "name": "steak",
+      "category": "meat",
+      "price": "100",
+      "image": "https://www.tastingtable.com/img/gallery/15-ingredients-that-will-seriously-elevate-your-steak/intro-1663169111.webp",
+      "id": 2
+    },
+    {
+      "code": "4845548",
+      "name": "Home",
+      "category": "games",
+      "price": "1000",
+      "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
+      "id": 3
+    },
+    {
+      "code": "1235",
+      "name": "dooood",
+      "category": "fruit",
+      "price": "27",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 4
+    },
+    {
+      "code": "25554",
+      "name": "mskmvs",
+      "category": "sweet",
+      "price": "5",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 15
+    },
+    {
+      "code": "5155155",
+      "name": "mscsmcs",
+      "category": "games",
+      "price": "19",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 13
+    },
+    {
+      "code": "25554",
+      "name": "mskmvs",
+      "category": "sweet",
+      "price": "5",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 12
+    },
+    {
+      "code": "25554",
+      "name": "mskmvs",
+      "category": "sweet",
+      "price": "5",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 11
+    },
+    {
+      "code": "25554",
+      "name": "mskmvs",
+      "category": "sweet",
+      "price": "5",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 9
+    },
+    {
+      "code": "25554",
+      "name": "mskmvs",
+      "category": "sweet",
+      "price": "5",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 8
+    },
+    {
+      "code": "25554",
+      "name": "mskmvs",
+      "category": "sweet",
+      "price": "5",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 7
+    },
+    {
+      "code": "5588484",
+      "name": "mvdsvmsdlv",
+      "category": "games",
+      "price": "4",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 20
+    },
+    {
+      "code": "5588484",
+      "name": "mvdsvmsdlv",
+      "category": "games",
+      "price": "4",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 51
+    },
+    {
+      "code": "5588484",
+      "name": "mvdsvmsdlv",
+      "category": "games",
+      "price": "4",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 21
+    },
+    {
+      "code": "5588484",
+      "name": "mvdsvmsdlv",
+      "category": "games",
+      "price": "4",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 62
+    },
+    {
+      "code": "5588484",
+      "name": "mvdsvmsdlv",
+      "category": "games",
+      "price": "4",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 87
+    },
+    {
+      "code": "5588484",
+      "name": "mvdsvmsdlv",
+      "category": "games",
+      "price": "4",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 54
+    }
+  ],
+  "categories": [
+    {
+      "name": "sweet",
+      "id": 48514
+    },
+    {
+      "name": "meat",
+      "id": 48515
+    },
+    {
+      "name": "fruit",
+      "id": 48516
+    },
+    {
+      "name": "games",
+      "id": 48519
+    }
+  ],
+  "carts": [
+    {
+      "name": "chocolate",
+      "id": 1,
+      "price": "10",
+      "quantity": "7",
+      "total": 70
+    },
+    {
+      "name": "steak",
+      "id": 2,
+      "price": "100",
+      "quantity": "6",
+      "total": 600
+    },
+    {
+      "name": "dooood",
+      "id": 4,
+      "price": "27",
+      "quantity": "2",
+      "total": 54
+    },
+    {
+      "name": "Home",
+      "id": 3,
+      "price": "1000",
+      "quantity": "1",
+      "total": 1000
+    }
+  ]
+}
