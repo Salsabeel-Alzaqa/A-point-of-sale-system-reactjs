@@ -50,12 +50,12 @@ useEffect(() => {
 		  <tbody>
         {!empty ?filteredproducts && filteredproducts.map(item => (
             <tr key={item.id}>
-                <td>{item.code}</td>
-                <td className="w-25"><img src={item.image} className="img-fluid img-thumbnail" alt={item.name}/></td>
-                <td>{item.name}</td>
-                <td>{item.category}</td>
-                <td>{item.price}</td>
-                <td><button onClick={() =>{ LoadDetail(item.id) }} className="btn btn-primary">Details</button></td>     
+                <td className="item">{item.code}</td>
+                <td className="w-25 item"><img src={item.image} className="img-fluid img-thumbnail" alt={item.name}/></td>
+                <td className="item">{item.name}</td>
+                <td className="item">{item.category}</td>
+                <td className="item">{item.price}</td>
+                <td><button onClick={() => { LoadDetail(item.id) }} className="btn bi bi-eye"  style={{fontSize: '20px', color: 'blue'}}></button></td>     
             </tr>)) : null}</tbody>
 		</table>   
     </div>
