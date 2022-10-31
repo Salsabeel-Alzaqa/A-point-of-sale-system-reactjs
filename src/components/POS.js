@@ -12,7 +12,7 @@ const POS = () => {
             console.log(err.message);
         })
     }, [carts])  
-    /*const RemoveProduct = (id) => {
+    const RemoveProduct = (id) => {
         fetch("http://localhost:8000/carts/" + id, {
             method: "DELETE"
         }).then((res) => {
@@ -20,7 +20,7 @@ const POS = () => {
         }).catch((err) => {
             console.log(err.message)
         })
-    }*/
+    }
     const summ = () =>
     {
         let sum=0;
@@ -64,7 +64,7 @@ const POS = () => {
         <tr key={item.id}>
             <td>{item.name}</td>
             <td>{item.price}</td>
-           <td><input type="number" id="quantity" name="quantity" value={quantity} onInput={(e)=> changeQuantity(e,item)} /></td>
+           <td><input type="number" id="quantity" name="quantity" value={item.quantity} onInput={(e)=> changeQuantity(e,item)} /></td>
            <td>{item.total}</td>
         </tr>
         ))}

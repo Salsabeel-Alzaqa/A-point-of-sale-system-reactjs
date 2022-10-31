@@ -37,13 +37,13 @@ img{
 .right {
   right: 0;
   width: 30%;
-  background-color: rgb(44, 67, 201);
+  background-color: rgb(86, 86, 88);
 }
 /* end */
 /* search bar */
 #search
 {
-    width:60%;
+    width:40%;
     height:30px;
     border-radius:25px;
     border-color:black;
@@ -52,7 +52,8 @@ img{
 {
   height:30px;
   border-radius:25px;
-  width:20%;
+  margin-top:10px;
+  width:15%;
 }
 /* end */
 
@@ -74,6 +75,7 @@ img{
 }
 .nav__item{
   float: left;
+  padding-left: 10px;
 }
 .link{
   display: block;
@@ -91,11 +93,12 @@ img{
   color:red;
 }
 /* table */
-table {
+.list {
   border-collapse: collapse;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(8, 30, 224, 0.185);
   margin: auto;
   font-family: Lucida Console;
+  margin-top:20px;
 }
 .item img{
   width: 100px;

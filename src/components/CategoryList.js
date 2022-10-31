@@ -8,7 +8,7 @@ const CategoryList = () => {
         navigate("/categories/edit/" + id);
     }
     
-    const Removefunction =  (id) => {
+    const RemoveCategory =  (id) => {
         if (window.confirm('Do you want to remove?')) {
              fetch("http://localhost:8000/categories/" + id, {
                 method: "DELETE"
@@ -36,7 +36,29 @@ const CategoryList = () => {
         name.toLowerCase().includes(search.toLowerCase())
   );
     return(
-        <div className="container">
+      <div>
+        <table className='list'>
+    <thead >
+          <tr>
+            <th className='text-primary mb-3 item'>Name</th>
+            <th className='item'><Link to="categories/create" className="btn bi bi-plus-square" style={{fontSize: '30px', color: 'blue'}}></Link></th>
+          </tr>
+          </thead>
+          <tbody>
+         {filteredCategories.map(post => (
+         <tr key={post.id}>
+        <td className='item'>{post.name}</td>
+        <td className='item'>
+          <ul>
+              <li><button onClick={() => { LoadEdit(post.id) }} className="btn bi bi-pencil-square" style={{fontSize: '20px', color: 'blue'}}></button>
+                <button onClick={() => { RemoveCategory(post.id) }} className="btn bi bi-trash"  style={{fontSize: '20px', color: 'red'}}></button>
+                  </li></ul></td></tr>
+          ))
+          }
+          </tbody>
+        </table> 
+      </div>
+       /*} <div className="container">
             <div className="search">
             <input type="text" value={search} id="search" placeholder=" Search" onChange={(e) => setSearch(e.target.value)} />
           </div>
@@ -64,7 +86,7 @@ const CategoryList = () => {
 		</table>   
     </div>
   </div>
-</div>
+          </div>*/
     );
 }
 export default CategoryList;

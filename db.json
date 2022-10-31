@@ -152,8 +152,8 @@
       "name": "chocolate",
       "id": 1,
       "price": "10",
-      "quantity": "4",
-      "total": 40
+      "quantity": "6",
+      "total": 60
     },
     {
       "name": "steak",
@@ -173,8 +173,36 @@
       "name": "dooood",
       "id": 4,
       "price": "27",
+      "quantity": "9",
+      "total": 243
+    },
+    {
+      "name": "mvdsvmsdlv",
+      "id": 21,
+      "price": "4",
+      "quantity": "18",
+      "total": 72
+    },
+    {
+      "name": "mskmvs",
+      "id": 7,
+      "price": "5",
       "quantity": "1",
-      "total": 27
+      "total": 5
+    },
+    {
+      "name": "mvdsvmsdlv",
+      "id": 62,
+      "price": "4",
+      "quantity": "14",
+      "total": 56
+    },
+    {
+      "name": "mskmvs",
+      "id": 15,
+      "price": "5",
+      "quantity": "8",
+      "total": 40
     }
   ]
 }

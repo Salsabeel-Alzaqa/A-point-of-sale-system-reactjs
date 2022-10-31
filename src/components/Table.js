@@ -46,7 +46,7 @@ const Table = ({Products}) => {
       })
     }
   return (
-    <table>
+    <table className='list'>
     <thead >
           <tr>
             <th className='text-primary mb-3 item'>Code</th>

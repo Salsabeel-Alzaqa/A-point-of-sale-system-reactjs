@@ -1,13 +1,13 @@
 import { useState,useEffect } from "react";
-import { useNavigate,useLocation} from "react-router-dom";
+import Table from "./Table";
+import Pagination from "./Pagination";
+import {useLocation} from "react-router-dom";
 const Filter = () => {
     const [products, setProducts] = useState([]);
     const location = useLocation();
     const { state } = location;
-    const navigate = useNavigate();
-    const LoadDetail = (id) => {
-        navigate("/products/detail/" + id);
-    }
+    const [currentPage, setCurrentPage] = useState(1);
+    const [productsNum,setProductsNum] = useState(5); //products number per page
    useEffect(() => {
         fetch("http://localhost:8000/products").then((res) => {
             return res.json();
@@ -28,39 +28,20 @@ useEffect(() => {
     })
   }, [])
      const filteredproducts = products.filter(({category}) => category === state );
-     let empty = false;
-     if (filteredproducts.length === 0)
-     {
-        empty = true;
-     }
+     // Get current product
+  const indexOfLastPost = currentPage * productsNum;
+  const indexOfFirstPost = indexOfLastPost - productsNum;
+  const currentProducts = filteredproducts.slice(indexOfFirstPost, indexOfLastPost);
+  // Change page
+  const paginate = (pageNumber) =>{setCurrentPage(pageNumber);}
     return(
-        <div className="container">
-  <div className="row">
-    <div className="col-12"> 
-		<table className="table table-image">
-		  <thead>
-		    <tr>     
-		      <th scope="col">Code</th>
-		      <th scope="col">Image</th>
-		      <th scope="col">Name</th>
-		      <th scope="col">Category</th>
-		      <th scope="col">price</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-        {!empty ?filteredproducts && filteredproducts.map(item => (
-            <tr key={item.id}>
-                <td className="item">{item.code}</td>
-                <td className="w-25 item"><img src={item.image} className="img-fluid img-thumbnail" alt={item.name}/></td>
-                <td className="item">{item.name}</td>
-                <td className="item">{item.category}</td>
-                <td className="item">{item.price}</td>
-                <td><button onClick={() => { LoadDetail(item.id) }} className="btn bi bi-eye"  style={{fontSize: '20px', color: 'blue'}}></button></td>     
-            </tr>)) : null}</tbody>
-		</table>   
-    </div>
-  </div>
-</div>
+        <div className='container mt-5'>
+      <h1 className='text-primary mb-3'>{state}</h1>
+            <label htmlFor="page-num">Show
+            <input type="number" value={productsNum} id="page-num" className="page-num" onInput={e=> setProductsNum(e.target.value)}></input></label>
+            <Table Products={currentProducts}/>
+            <Pagination productsPerPage={productsNum} AllProducts={filteredproducts.length} paginate={paginate}/>
+        </div>
     );
 }
 export default Filter;
