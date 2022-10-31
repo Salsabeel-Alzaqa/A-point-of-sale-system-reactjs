@@ -1,7 +1,8 @@
 import { useState,useEffect } from "react";
 const POS = () => {
     const [carts, setCarts] = useState([]);
-    const [tax, setTax] = useState();
+    const [quantity, setQuantity] = useState("1");
+    //const [tax, setTax] = useState();
     useEffect(() => {
         fetch("http://localhost:8000/carts").then((res) => {
             return res.json();
@@ -11,8 +12,7 @@ const POS = () => {
             console.log(err.message);
         })
     }, [carts])  
-    const [quantity, setQuantity] = useState("1");
-    const RemoveProduct = (id) => {
+    /*const RemoveProduct = (id) => {
         fetch("http://localhost:8000/carts/" + id, {
             method: "DELETE"
         }).then((res) => {
@@ -20,7 +20,7 @@ const POS = () => {
         }).catch((err) => {
             console.log(err.message)
         })
-    }
+    }*/
     const summ = () =>
     {
         let sum=0;
@@ -49,8 +49,8 @@ const POS = () => {
 <div className="search">
             <input type="text" id="search" placeholder=" Search" />
           </div>
-<div> 
-    <table>
+<div > 
+    <table className="cart">
       <thead>
         <tr>     
           <th >Name</th>
@@ -64,7 +64,7 @@ const POS = () => {
         <tr key={item.id}>
             <td>{item.name}</td>
             <td>{item.price}</td>
-           <td><input type="number" id="quantity" name="quantity" value={item.quantity} onChange={(e)=> changeQuantity(e,item)} /></td>
+           <td><input type="number" id="quantity" name="quantity" value={quantity} onInput={(e)=> changeQuantity(e,item)} /></td>
            <td>{item.total}</td>
         </tr>
         ))}
@@ -72,6 +72,10 @@ const POS = () => {
     </table>      
 </div>
 <div className="sticky">
+<p>SubTotal:{summ()}</p>
+<p>SubTotal:{summ()}</p>
+<p>SubTotal:{summ()}</p>
+<p>SubTotal:{summ()}</p>
 <p>SubTotal:{summ()}</p>
 </div>
 </div> 

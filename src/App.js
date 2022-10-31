@@ -16,7 +16,7 @@ import POS  from './components/POS';
 
 function App() {
   return (
-    <div className="App flex-container"> 
+    <div className="App"> 
  <div className="left">
         <Navbar />
         <Routes>
