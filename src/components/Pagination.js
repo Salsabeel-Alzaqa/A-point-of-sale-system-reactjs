@@ -6,9 +6,8 @@ const Pagination = ({ productsPerPage,AllProducts, paginate }) => {
   }
 
   return (
-    <footer className='mx-auto'> 
     <nav>
-      <ul className='pagination'>
+      <ul className='pagination mx-auto' style={{paddingTop: '30px',width:'20%'}}>
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
             <button onClick={() => paginate(number)} className='page-link'>
@@ -18,7 +17,6 @@ const Pagination = ({ productsPerPage,AllProducts, paginate }) => {
         ))}
       </ul>
     </nav>
-    </footer>
   );
 };
 export default Pagination;

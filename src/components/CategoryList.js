@@ -1,7 +1,10 @@
 import { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Pagination from "./Pagination";
 const CategoryList = () => {
     const [categories, setCategories] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [catNum,setCatNum] = useState(3); //category number per page
     const navigate = useNavigate();
 
     const LoadEdit = (id) => {
@@ -33,19 +36,31 @@ const CategoryList = () => {
      const [search, setSearch] = useState("");
      const filteredCategories = categories.filter(
       ({ name }) =>
-        name.toLowerCase().includes(search.toLowerCase())
-  );
+        name.toLowerCase().includes(search.toLowerCase()))
+       // Get current product
+      const indexOfLastPost = currentPage * catNum;
+      const indexOfFirstPost = indexOfLastPost - catNum;
+      const currentProducts = filteredCategories.slice(indexOfFirstPost, indexOfLastPost);
+  // Change page
+  const paginate = (pageNumber) =>{setCurrentPage(pageNumber);}
     return(
+      <div className='container mt-5' >
+      <h1 className='text-primary mb-3'>CATEGORIES
+      <Link to="categories/create" className="btn bi bi-plus-square" style={{fontSize: '40px', color: 'blue',paddingBottom:'11px'}}></Link></h1>
       <div>
-        <table className='list'>
+            <input type="text" value={search} className="search" id="search" placeholder=" Search" onChange={(e) => setSearch(e.target.value)} />
+            <label htmlFor="page-num">Show
+            <input type="number" value={catNum} id="page-num" className="page-num" onInput={e=> setCatNum(e.target.value)}></input></label>
+      </div>
+        <table className='list' style={{width: '70%'}}>
     <thead >
           <tr>
             <th className='text-primary mb-3 item'>Name</th>
-            <th className='item'><Link to="categories/create" className="btn bi bi-plus-square" style={{fontSize: '30px', color: 'blue'}}></Link></th>
+            <th className='item'></th>
           </tr>
           </thead>
           <tbody>
-         {filteredCategories.map(post => (
+         {currentProducts.map(post => (
          <tr key={post.id}>
         <td className='item'>{post.name}</td>
         <td className='item'>
@@ -56,37 +71,10 @@ const CategoryList = () => {
           ))
           }
           </tbody>
-        </table> 
+        </table>
+        <Pagination productsPerPage={catNum} AllProducts={filteredCategories.length} paginate={paginate} />
       </div>
-       /*} <div className="container">
-            <div className="search">
-            <input type="text" value={search} id="search" placeholder=" Search" onChange={(e) => setSearch(e.target.value)} />
-          </div>
-  <div className="row">
-    <div className="col-12"> 
-		<table className="table table-image">
-		  <thead>
-		    <tr>     
-		      <th scope="col">Name</th>
-              <th><Link to="categories/create" className="btn btn-success">Add New (+)</Link></th>
-		    </tr>
-		  </thead>
-		  <tbody>
-          
-          {filteredCategories && filteredCategories.map(item => (
-            <tr key={item.id}>
-                <td>{item.name}</td>
-                <td><button onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Edit</button>
-                    <button onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remove</button>
-                </td>
-            </tr>
-            ))
-            }
-		  </tbody>
-		</table>   
-    </div>
-  </div>
-          </div>*/
+
     );
 }
 export default CategoryList;

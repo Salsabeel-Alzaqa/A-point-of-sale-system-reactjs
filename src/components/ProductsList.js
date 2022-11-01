@@ -26,8 +26,8 @@ const ProductsList = () => {
   const paginate = (pageNumber) =>{setCurrentPage(pageNumber);}
   return (
     <div className='container mt-5'>
-      <h1 className='text-primary mb-3'>Products
-      <Link to="products/create" className="btn bi bi-plus-square" style={{fontSize: '30px', color: 'blue'}}></Link></h1>
+      <h1 className='text-primary mb-3'>PRODUCTS
+      <Link to="products/create" className="btn bi bi-plus-square" style={{fontSize: '40px', color: 'blue',paddingBottom:'11px'}}></Link></h1>
       <div>
             <input type="text" value={search} className="search" id="search" placeholder=" Search" onChange={(e) => setSearch(e.target.value)} />
             <label htmlFor="page-num">Show

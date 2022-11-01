@@ -234,6 +234,13 @@
       "price": "4",
       "quantity": "8",
       "total": 32
+    },
+    {
+      "name": "lfgklgk",
+      "id": 65,
+      "price": 8,
+      "quantity": "1",
+      "total": 8
     }
   ]
 }
