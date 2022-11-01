@@ -30,9 +30,7 @@ const EditCategory = () => {
         }
         else
         {
-            const name = values.name;
-            const category = {name};
-            EditCategory(category)
+            EditCategory(values);
         }
         formik.resetForm();  
         },

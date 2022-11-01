@@ -13,7 +13,7 @@ const Navbar =() =>{
     }, [categories]);
 
     return(
-        <div className='navbar'>  
+        <div className='navbar'>
         <ul className="nav__list">
         <li className="nav__item"><NavLink  className="link" to="/" >Home</NavLink></li>
         <li className="nav__item"><NavLink  className="link" to="/categories">categories</NavLink></li>

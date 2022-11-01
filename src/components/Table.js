@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link,useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 const Table = ({Products}) => {
     const navigate = useNavigate();
     //Detail button
@@ -54,7 +54,7 @@ const Table = ({Products}) => {
             <th className='text-primary mb-3 item'>Name</th>
             <th className='text-primary mb-3 item'>Category</th>
             <th className='text-primary mb-3 item'>price</th>
-            <th className='item'><Link to="products/create" className="btn bi bi-plus-square" style={{fontSize: '30px', color: 'blue'}}></Link></th>
+            <th className='text-primary mb-3 item'></th>
           </tr>
           </thead>
           <tbody>

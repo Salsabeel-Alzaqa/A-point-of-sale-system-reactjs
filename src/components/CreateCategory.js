@@ -5,6 +5,15 @@ import {useFormik } from "formik";
 const CreateCategory = () => {
     const [categories, setCategories] = useState([]);
     const navigate=useNavigate();
+    useEffect(() => {
+        fetch("http://localhost:8000/categories/").then((res) => {
+            return res.json();
+        }).then((resp) => {
+            setCategories(resp);
+        }).catch((err) => {
+            console.log(err.message);
+        })
+    }, []);
     const postData = async(category)=>{
           await fetch("http://localhost:8000/categories",{
           method: "POST",
@@ -41,15 +50,6 @@ const CreateCategory = () => {
             return errors;
         }
     });
-    useEffect(() => {
-        fetch("http://localhost:8000/categories/").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCategories(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
     return (
         <div>
             <div className="row">
