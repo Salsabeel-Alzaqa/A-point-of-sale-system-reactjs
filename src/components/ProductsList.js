@@ -6,15 +6,14 @@ const ProductsList = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsNum,setProductsNum] = useState(5); //products number per page
-  useEffect(() =>{
-    fetch("http://localhost:8000/products").then((res) => {
-      return res.json();
-    }).then((resp) => {
-      setProducts(resp);
-    }).catch((err) => {
-      console.log(err.message);
-    })
-  }, [products])
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:8000/products");
+      const Data = await response.json();
+      setProducts(Data);
+    };
+    fetchData();
+  }, [products]);
   //filter --> to search by product name or category 
   const [search, setSearch] = useState("");
   const filteredproducts = products.filter(({name,category}) => name.toLowerCase().includes(search.toLowerCase())|| category.toLowerCase().includes(search.toLowerCase()));

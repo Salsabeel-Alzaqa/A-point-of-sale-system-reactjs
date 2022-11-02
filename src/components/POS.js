@@ -2,16 +2,15 @@ import { useState,useEffect } from "react";
 const POS = () => {
     const [carts, setCarts] = useState([]);
     const [quantity, setQuantity] = useState("1");
-    //const [tax, setTax] = useState();
+    //const [tax, setTax] = useState(); 
     useEffect(() => {
-        fetch("http://localhost:8000/carts").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCarts(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, [carts])  
+      const fetchData = async () => {
+        const response = await fetch("http://localhost:8000/carts");
+        const Data = await response.json();
+        setCarts(Data);
+      };
+      fetchData();
+    }, [carts]);
     const RemoveProduct = (id) => {
         fetch("http://localhost:8000/carts/" + id, {
             method: "DELETE"
@@ -46,7 +45,6 @@ const POS = () => {
       })}
     return(
     <div className="right">
-     {/* 
       <div> 
       <div className="barcode">
             <input type="text" id="search" placeholder="Barcode" />
@@ -73,7 +71,7 @@ const POS = () => {
         ))}
       </tbody>
     </table>      
-</div>*/}
+</div>*
 
 <div className="sticky">
 <p>SubTotal:{summ()}</p>

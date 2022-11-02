@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {useFormik } from "formik";
-const EditProduct = () => {
+const EditProduct = ({categories}) => {
     const { productID } = useParams();
     const[code,setCode]=useState("");
     const[name,setName]=useState("");
@@ -9,7 +9,6 @@ const EditProduct = () => {
     const[price,setPrice]=useState("");
     const[image,setImage]=useState("");
     const navigate=useNavigate();
-    const [categories, setCategories] = useState([]);
     //Edit product ---> json file
     const EditProduct = async(product)=>{
         await fetch("http://localhost:8000/products/"+ productID,{
@@ -23,27 +22,18 @@ const EditProduct = () => {
          console.log(err.message)
        }) }
     useEffect(() => {
-        fetch("http://localhost:8000/categories/").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCategories(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
-    useEffect(() => {
-        fetch("http://localhost:8000/products/" + productID).then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCode(resp.code);
-            setName(resp.name);
-            setCategory(resp.category);
-            setPrice(resp.price);
-            setImage(resp.image);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
+        const fetchData = async () => {
+          const response = await fetch("http://localhost:8000/products/" + productID);
+          const Data = await response.json();
+          setCode(Data.code);
+          setName(Data.name);
+          setCategory(Data.category);
+          setPrice(Data.price);
+          setImage(Data.image);
+        };
+    
+        fetchData();
+      }, []);
     const formik = useFormik(
         {
             initialValues:

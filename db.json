@@ -27,7 +27,7 @@
     {
       "code": "1235",
       "name": "dooood",
-      "category": "fruit",
+      "category": "sweet",
       "price": "27",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 4
@@ -83,7 +83,7 @@
     {
       "code": "25554",
       "name": "mskmvs",
-      "category": "sweet",
+      "category": "",
       "price": "5",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 7
@@ -131,7 +131,7 @@
     {
       "code": "45487",
       "name": "tkrsgkrg",
-      "category": "sweet",
+      "category": "",
       "price": 125,
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 63
@@ -147,16 +147,24 @@
     {
       "code": "1255",
       "name": "lfgklgk",
-      "category": "sweet",
+      "category": "",
       "price": 8,
       "image": "https://avante.biz/wp-content/uploads/Sweet-Images/Sweet-Images-005.jpg",
       "id": 65
+    },
+    {
+      "code": "455788",
+      "name": "soso",
+      "category": "nana",
+      "price": 11,
+      "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
+      "id": 66
     }
   ],
   "categories": [
     {
       "name": "sweet",
-      "id": 48514
+      "id": 485
     },
     {
       "name": "meat",
@@ -169,6 +177,14 @@
     {
       "name": "fruit",
       "id": 48520
+    },
+    {
+      "name": "nana",
+      "id": 48521
+    },
+    {
+      "name": "soso",
+      "id": 48522
     }
   ],
   "carts": [

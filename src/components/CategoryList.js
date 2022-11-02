@@ -3,34 +3,54 @@ import { Link, useNavigate } from "react-router-dom";
 import Pagination from "./Pagination";
 const CategoryList = () => {
     const [categories, setCategories] = useState([]);
+    const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [catNum,setCatNum] = useState(3); //category number per page
     const navigate = useNavigate();
-
     const LoadEdit = (id) => {
         navigate("/categories/edit/" + id);
     }
-    const RemoveCategory =  (id) => {
-        if (window.confirm('Do you want to remove?')) {
-             fetch("http://localhost:8000/categories/" + id, {
+    const EditProduct = async(product,id)=>{
+      await fetch("http://localhost:8000/products/"+ id,{
+       method:"PUT",
+       headers:{"content-type":"application/json"},
+       body:JSON.stringify(product)
+     }).then((res)=>{
+      console.log("Saved")
+     }).catch((err)=>{
+       console.log(err.message)
+     }) }
+    const RemoveCategory = async (category) => {
+        if (window.confirm('Do you want to remove?'))
+        {
+             await fetch("http://localhost:8000/categories/" + category.id, {
                 method: "DELETE"
             }).then((res) => {
                 alert('Removed successfully.')
             }).catch((err) => {
                 console.log(err.message)
             })
+            const arr =products.filter((item) => item.category === category.name);
+            arr.forEach(item => {
+                const product={
+                    ...item,
+                    category:""
+                }
+                EditProduct(product,item.id);
+            });
         }
     }
     useEffect(() => {
-        fetch("http://localhost:8000/categories").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCategories(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, [categories])
-    
+      const fetchData = async () => {
+        const response = await fetch("http://localhost:8000/categories");
+        const response2 = await fetch("http://localhost:8000/products");
+        const Data = await response.json();
+        const Data2 = await response2.json();
+        setCategories(Data);
+        setProducts(Data2);
+      };
+      fetchData();
+    }, [categories]);
     //search 
      const [search, setSearch] = useState("");
      const filteredCategories = categories.filter(
@@ -65,7 +85,7 @@ const CategoryList = () => {
         <td className='item'>
           <ul>
               <li><button onClick={() => { LoadEdit(post.id) }} className="btn bi bi-pencil-square" style={{fontSize: '20px', color: 'blue'}}></button>
-                <button onClick={() => { RemoveCategory(post.id) }} className="btn bi bi-trash"  style={{fontSize: '20px', color: 'red'}}></button>
+                <button onClick={() => { RemoveCategory(post) }} className="btn bi bi-trash"  style={{fontSize: '20px', color: 'red'}}></button>
                   </li></ul></td></tr>
           ))
           }

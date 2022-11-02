@@ -58,44 +58,10 @@ img{
   text-align: center;
 }
 /* end */
-
-/* for navbar 
-.navbar{
-  display: flex;  
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color:#111;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(8, 30, 224, 0.185);
-}
-.nav__list {
-  list-style-type: none; 
-  display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content:center;
-}
-.nav__item{
-  float: left;
-  padding-left: 10px;
-}
-.link{
-  display: block;
-  color:var(--c--an);
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.link:hover {
-  background-color:var(--c--b);
-  border-radius:25px;
-}*/
-/* end */
-
 .error{
   color:red;
 }
 /* table */
-
 .list {
   border-collapse: collapse;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(8, 30, 224, 0.185);
@@ -116,6 +82,10 @@ img{
 }
 h2{
   color:blue;
+  padding-top: 70px;
+}
+h1{
+  padding-top:30px;
 }
 .item ul{
   list-style-type: none; 
@@ -156,31 +126,56 @@ div.sticky {
   background-color: antiquewhite;
 }
 
-.menu {
-  position: relative;
-  width: 200px;
-  z-index: 0;
+/*navbar*/
+.nav__submenu {
+  display: none;
 }
-.itemm {
-  background: #aacbff;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-family: Roboto;
-  font-size: 20px;
-  padding: 10px;
-  position: relative;
-  text-align: center;
-  transition: background-color .05s ease-in-out;
-  z-index: 1;
+.nav__menu-item:hover .nav__submenu {
+  display: block;
 }
-.itemm:hover {
-  background-color: #8cb8ff;
-  color: white;
+.nav ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  justify-content:center;
 }
-.open {
-  position: absolute;
-  top: 100%;
+.nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-  z-index: 0;
+  background-color:#111;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(8, 30, 224, 0.185);
 }
+.link {
+  display: block;
+  color:var(--c--an);
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav__menu-item {
+  float: left;
+  padding-left: 10px;
+}
+.nav__menu-item:hover {
+  background-color:black;
+  border-radius:15px;
+}
+.nav__menu-item:hover .nav__submenu {
+  display: block;
+  border-radius:15px;
+}
+.nav__submenu {
+  font-weight: 300;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: 180px;
+  background-color:black;
+}
+.nav__submenu-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius:15px;
+}
+/* end */

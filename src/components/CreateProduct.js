@@ -1,20 +1,7 @@
-import { useState,useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {useFormik } from "formik";
-
-
-const CreateProduct = () => {
-    const [categories, setCategories] = useState([]);
+const CreateProduct = ({categories}) => {
     const navigate=useNavigate();
-    useEffect(() => {
-        fetch("http://localhost:8000/categories/").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCategories(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
     const AddProduct = async(products)=>{
         await fetch("http://localhost:8000/products",{
         method: "POST",

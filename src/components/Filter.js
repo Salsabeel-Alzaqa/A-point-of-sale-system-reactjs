@@ -8,25 +8,14 @@ const Filter = () => {
     const { state } = location;
     const [currentPage, setCurrentPage] = useState(1);
     const [productsNum,setProductsNum] = useState(5); //products number per page
-   useEffect(() => {
-        fetch("http://localhost:8000/products").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setProducts(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, [products])
-    
-useEffect(() => {
-    fetch("http://localhost:8000/products").then((res) => {
-        return res.json();
-    }).then((resp) => {
-        setProducts(resp);
-    }).catch((err) => {
-        console.log(err.message);
-    })
-  }, [])
+    useEffect(() => {
+        const fetchData = async () => {
+          const response = await fetch("http://localhost:8000/products");
+          const Data = await response.json();
+          setProducts(Data);
+        };
+        fetchData();
+      }, [products]);
      const filteredproducts = products.filter(({category}) => category === state );
      // Get current product
   const indexOfLastPost = currentPage * productsNum;

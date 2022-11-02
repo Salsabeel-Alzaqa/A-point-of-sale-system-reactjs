@@ -1,10 +1,8 @@
 import {useState,useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {useFormik } from "formik";
-
-const EditCategory = () => {
+const EditCategory = ({categories}) => {
     const { categoryID } = useParams();
-    const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
     const [category, setCategory] = useState("");
     const navigate=useNavigate();
@@ -15,7 +13,7 @@ const EditCategory = () => {
         headers:{"content-type":"application/json"},
         body:JSON.stringify(category)
       }).then((res)=>{
-        alert('Saved successfully.')
+        alert('Saved successfully.');
         navigate('/categories');
       }).catch((err)=>{
         console.log(err.message)
@@ -30,7 +28,6 @@ const EditCategory = () => {
        }).catch((err)=>{
          console.log(err.message)
        }) }
-    
     const formik = useFormik({
         initialValues:{
             name:''
@@ -42,16 +39,14 @@ const EditCategory = () => {
         }
         else
         {
-            products.forEach((item)=>{
-                if(item.category === category)
-                {
-                    const product={
-                        ...item,
-                        category:values.name
-                    }
-                    EditProduct(product,item.id);
+            const arr =products.filter((item) => item.category === category);
+            arr.forEach(item => {
+                const product={
+                    ...item,
+                    category:values.name
                 }
-            })
+                EditProduct(product,item.id);
+            });
             EditCategory(values);
         }
         formik.resetForm();  
@@ -64,30 +59,17 @@ const EditCategory = () => {
             return errors;
         }
     });
-
     useEffect(() => {
-        fetch("http://localhost:8000/categories/").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCategories(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-        fetch("http://localhost:8000/categories/" + categoryID).then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCategory(resp.name);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-        fetch("http://localhost:8000/products").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setProducts(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
+        const fetchData = async () => {
+          const response = await fetch("http://localhost:8000/products");
+          const response2 = await fetch("http://localhost:8000/categories/" + categoryID);
+          const Data = await response.json();
+          const Data2 = await response2.json();
+          setProducts(Data);
+          setCategory(Data2.name);
+        };
+        fetchData();
+      }, []);
     return ( 
         <form className="container" onSubmit={formik.handleSubmit} style={{width: '50%',paddingTop:'40px' }}>
         <div>

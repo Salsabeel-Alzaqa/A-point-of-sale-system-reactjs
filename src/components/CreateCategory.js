@@ -1,20 +1,8 @@
-import { useState,useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {useFormik } from "formik";
-
-const CreateCategory = () => {
-    const [categories, setCategories] = useState([]);
+const CreateCategory = ({categories}) => {
     const navigate=useNavigate();
-    useEffect(() => {
-        fetch("http://localhost:8000/categories/").then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setCategories(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
-    const postData = async(category)=>{
+    const  AddCategory= async(category)=>{
           await fetch("http://localhost:8000/categories",{
           method: "POST",
           headers: {"Content-Type": "application/json"},
@@ -36,9 +24,7 @@ const CreateCategory = () => {
         }
         else
         {
-            let name = values.name;
-            let category = {name};
-            postData(category)
+            AddCategory(values);
         }
         formik.resetForm();  
         },

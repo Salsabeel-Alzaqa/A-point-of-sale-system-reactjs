@@ -4,14 +4,13 @@ const  ProductDetail = () => {
     const { productID } = useParams();
     const [products, setProducts] = useState({});
     useEffect(() => {
-        fetch("http://localhost:8000/products/" + productID).then((res) => {
-            return res.json();
-        }).then((resp) => {
-            setProducts(resp);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
+        const fetchData = async () => {
+          const response = await fetch("http://localhost:8000/products/" + productID);
+          const Data = await response.json();
+          setProducts(Data);
+        };
+        fetchData();
+      }, []);
     return (
     <div >
         <h2>The product name is : <b>{products.name}</b>  (Code: {products.code})</h2>
