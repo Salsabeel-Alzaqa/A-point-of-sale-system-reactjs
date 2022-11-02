@@ -5,6 +5,8 @@ import {useFormik } from "formik";
 const EditCategory = () => {
     const { categoryID } = useParams();
     const [categories, setCategories] = useState([]);
+    const [products, setProducts] = useState([]);
+    const [category, setCategory] = useState("");
     const navigate=useNavigate();
     //Edit category ---> json file
     const EditCategory = async(category)=>{
@@ -18,6 +20,16 @@ const EditCategory = () => {
       }).catch((err)=>{
         console.log(err.message)
       }) }
+      const EditProduct = async(product,id)=>{
+        await fetch("http://localhost:8000/products/"+ id,{
+         method:"PUT",
+         headers:{"content-type":"application/json"},
+         body:JSON.stringify(product)
+       }).then((res)=>{
+        console.log("Saved")
+       }).catch((err)=>{
+         console.log(err.message)
+       }) }
     
     const formik = useFormik({
         initialValues:{
@@ -30,6 +42,16 @@ const EditCategory = () => {
         }
         else
         {
+            products.forEach((item)=>{
+                if(item.category === category)
+                {
+                    const product={
+                        ...item,
+                        category:values.name
+                    }
+                    EditProduct(product,item.id);
+                }
+            })
             EditCategory(values);
         }
         formik.resetForm();  
@@ -48,6 +70,20 @@ const EditCategory = () => {
             return res.json();
         }).then((resp) => {
             setCategories(resp);
+        }).catch((err) => {
+            console.log(err.message);
+        })
+        fetch("http://localhost:8000/categories/" + categoryID).then((res) => {
+            return res.json();
+        }).then((resp) => {
+            setCategory(resp.name);
+        }).catch((err) => {
+            console.log(err.message);
+        })
+        fetch("http://localhost:8000/products").then((res) => {
+            return res.json();
+        }).then((resp) => {
+            setProducts(resp);
         }).catch((err) => {
             console.log(err.message);
         })

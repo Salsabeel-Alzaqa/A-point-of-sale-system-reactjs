@@ -31,7 +31,7 @@ function App() {
         </Routes>
         </div>
         <div className="right">
-           <POS />
+        <POS />
         </div>
         </div>
 

@@ -13,25 +13,18 @@ const  ProductDetail = () => {
         })
     }, []);
     return (
-        <div className="bboy">
-               <div className="container">
-            <div className="card row" style={{ "textAlign": "left" }}>
-                <div className="card-title">
-                <h2>The product name is : <b>{products.name}</b>  (Code: {products.code})</h2>
-                </div>
-                <div className="card-body"></div>
-                {products &&
-                    <div>
-                        <img src={products.image} alt="pic" ></img>
-                        <h3>Details:</h3>
-                        <h5>Category : {products.category}</h5>
-                        <h5>price : {products.price}</h5>
-                        <Link className="btn btn-danger" to="/">Back to Products</Link>
-                    </div>
-                }
+    <div >
+        <h2>The product name is : <b>{products.name}</b>  (Code: {products.code})</h2>
+        {products &&
+            <div>
+                <img src={products.image} alt="pic" ></img>
+                <h3>Details:</h3>
+                <h5>Category : {products.category}</h5>
+                <h5>price : {products.price}</h5>
+                <Link to="/" className="btn btn-outline-primary">Back</Link>
             </div>
-            </div>
-        </div >
+        }
+    </div>
     );
 }
 

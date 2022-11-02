@@ -51,36 +51,24 @@ const CreateCategory = () => {
         }
     });
     return (
+        <form className="container" onSubmit={formik.handleSubmit} style={{width: '50%',paddingTop:'40px' }}>
         <div>
-            <div className="row">
-                <div className="offset-lg-3 col-lg-6">
-                    <form className="container" onSubmit={formik.handleSubmit}>
-                        <div className="card" style={{"textAlign":"left"}}>
-                            <div className="card-title">
-                                <h2>Add Category</h2>
-                            </div>
-                            <div className="card-body">
-                                <div className="row">
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Name</label>
-                                            <input id="name" name="name" {... formik.getFieldProps('name')} className="form-control"></input>
-                                            {formik.errors.name ? <div className="error">{formik.errors.name}</div> : null}
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                           <button className="btn btn-success" type="submit">Save</button>
-                                           <Link to="/categories" className="btn btn-danger">Back</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <h2 style={{color:'blue'}}>Add Category</h2>
+        </div>
+        <div className="col-lg-12">
+            <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input id="name" name="name" value={formik.values.name} onChange={formik.handleChange} className="form-control"></input>
+                {formik.errors.name ? <div className="error">{formik.errors.name}</div> : null}
             </div>
         </div>
+        <div className="col-lg-12">
+            <div className="form-group">
+                <Link to="/categories" className="btn btn-outline-primary">Back</Link>
+                <button className="btn btn-outline-success" type="submit">Save</button>
+            </div>
+        </div>
+    </form>
     );
 }
 export default CreateCategory;

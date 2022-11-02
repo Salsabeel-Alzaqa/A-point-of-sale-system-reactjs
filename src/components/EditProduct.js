@@ -58,7 +58,6 @@ const EditProduct = () => {
             onSubmit:async (values) =>
             {
                 EditProduct(values);
-                formik.resetForm();  
             },
             validate:values =>{
                 let errors ={};

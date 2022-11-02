@@ -10,7 +10,6 @@ const CategoryList = () => {
     const LoadEdit = (id) => {
         navigate("/categories/edit/" + id);
     }
-    
     const RemoveCategory =  (id) => {
         if (window.confirm('Do you want to remove?')) {
              fetch("http://localhost:8000/categories/" + id, {

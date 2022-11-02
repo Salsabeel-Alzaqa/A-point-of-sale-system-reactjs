@@ -45,14 +45,16 @@ const POS = () => {
         console.log(err.message)
       })}
     return(
-<div>
-<div className="search">
-            <input type="text" id="search" placeholder=" Search" />
+    <div className="right">
+     {/* 
+      <div> 
+      <div className="barcode">
+            <input type="text" id="search" placeholder="Barcode" />
           </div>
-<div > 
     <table className="cart">
       <thead>
         <tr>     
+          <th></th>
           <th >Name</th>
           <th>price</th>
           <th>quantity</th>
@@ -62,6 +64,7 @@ const POS = () => {
       <tbody>
       {carts && carts.map(item => (
         <tr key={item.id}>
+            <td><button onClick={() => { RemoveProduct(item.id) }} className="btn bi bi-trash"  style={{fontSize: '20px', color: 'red'}}></button></td>
             <td>{item.name}</td>
             <td>{item.price}</td>
            <td><input type="number" id="quantity" name="quantity" value={item.quantity} onInput={(e)=> changeQuantity(e,item)} /></td>
@@ -70,13 +73,16 @@ const POS = () => {
         ))}
       </tbody>
     </table>      
-</div>
+</div>*/}
+
 <div className="sticky">
 <p>SubTotal:{summ()}</p>
 <p>SubTotal:{summ()}</p>
 <p>SubTotal:{summ()}</p>
 <p>SubTotal:{summ()}</p>
-<p>SubTotal:{summ()}</p>
+<div>
+<button className='btn btn-outline-danger' style={{width:'15%'}}>CANCEL</button>
+<button className='btn btn-outline-success' style={{width:'15%'}}>PAYMENT</button></div>
 </div>
 </div> 
     );
