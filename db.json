@@ -75,7 +75,7 @@
     {
       "code": "45585",
       "name": "dkg;sgg",
-      "category": "",
+      "category": "unknown",
       "price": 7,
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 64
@@ -91,7 +91,7 @@
     {
       "code": "455788",
       "name": "soso",
-      "category": "",
+      "category": "games",
       "price": 11,
       "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
       "id": 66
@@ -107,7 +107,7 @@
     {
       "code": "125",
       "name": "sakawo",
-      "category": "",
+      "category": "unknown",
       "price": 13,
       "image": "https://avante.biz/wp-content/uploads/Sweet-Images/Sweet-Images-005.jpg",
       "id": 68
@@ -172,27 +172,5 @@
       "id": 48519
     }
   ],
-  "carts": [
-    {
-      "name": "chocolate",
-      "id": 1,
-      "price": 6,
-      "quantity": "1",
-      "total": 6
-    },
-    {
-      "name": "Home",
-      "id": 3,
-      "price": "1000",
-      "quantity": "1",
-      "total": 1000
-    },
-    {
-      "name": "steak",
-      "id": 2,
-      "price": "100",
-      "quantity": "1",
-      "total": 100
-    }
-  ]
+  "carts": []
 }

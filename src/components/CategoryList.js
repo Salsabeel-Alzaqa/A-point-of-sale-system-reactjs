@@ -34,7 +34,7 @@ const CategoryList = () => {
             arr.forEach(item => {
                 const product={
                     ...item,
-                    category:""
+                    category:"unknown"
                 }
                 EditProduct(product,item.id);
             });
