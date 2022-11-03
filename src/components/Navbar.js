@@ -11,8 +11,8 @@ const Navbar =() =>{
         fetchData();
       }, [categories]);
       const logout=()=>{
-        localStorage.removeItem("signUp")
-        window.location.reload()
+        localStorage.removeItem("signUp");
+        window.location.reload();
     }
     return(
         <nav className="nav">

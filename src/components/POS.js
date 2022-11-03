@@ -1,4 +1,6 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect,useRef} from "react";
+import { useReactToPrint } from 'react-to-print';
+import { PrintCart } from "./PrintCart";
 const POS = () => {
     const [carts, setCarts] = useState([]);
     const [quantity, setQuantity] = useState("1");
@@ -23,6 +25,15 @@ const POS = () => {
             console.log(err.message)
         })
     }
+  const componentRef = useRef();
+
+  const handleReactToPrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
+  const handlePrint = () => {
+    handleReactToPrint();
+  }
     const subtotal = () =>
     {
         let sum=0;
@@ -62,6 +73,9 @@ const POS = () => {
     <div className="right">
       <div className="barcode">
             <input type="text" placeholder="Barcode Scanner" style={{width:'85%'}}/>
+          </div>
+          <div style={{display: "none"}}>
+                <PrintCart carts={carts} totalAmount={Total()} Discount={discount} tax={tax} ref={componentRef}/>
           </div>
 <div className="cart">
 {carts.length >0 ? carts.map(item => (
@@ -107,8 +121,8 @@ const POS = () => {
 </table>
 <p style={{textAlign:'center'}}>Total : {Total()} GTQ</p>
 <div>
-<button className='btn btn-outline-danger' style={{width:'50%'}} onClick={()=>carts.forEach((item)=>RemoveProduct(item.id))}>CANCEL</button>
-<button className='btn btn-outline-success' style={{width:'50%'}}>PAYMENT</button></div>
+<button className='btn btn-danger' style={{width:'50%',borderRadius:'25px'}} onClick={()=>carts.forEach((item)=>RemoveProduct(item.id))}>CANCEL</button>
+<button className='btn btn-success' style={{width:'50%',borderRadius:'25px'}} onClick={handlePrint}>PAYMENT</button></div>
 </div></div>
 </div> 
     );

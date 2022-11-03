@@ -1,10 +1,10 @@
 {
   "products": [
     {
-      "code": "12354",
+      "code": "1235",
       "name": "chocolate",
       "category": "sweets",
-      "price": 9,
+      "price": 6,
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 1
     },
@@ -170,19 +170,22 @@
     {
       "name": "games",
       "id": 48519
-    },
-    {
-      "name": "per",
-      "id": 48520
     }
   ],
   "carts": [
     {
       "name": "chocolate",
       "id": 1,
-      "price": 9,
+      "price": 6,
       "quantity": "1",
-      "total": 9
+      "total": 6
+    },
+    {
+      "name": "Home",
+      "id": 3,
+      "price": "1000",
+      "quantity": "1",
+      "total": 1000
     },
     {
       "name": "steak",

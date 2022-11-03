@@ -189,7 +189,7 @@ h1{
 
 div.sticky {
   position: fixed;
-  height: auto;
+  height:30%;
   width:30%;
   bottom: 0;
 }

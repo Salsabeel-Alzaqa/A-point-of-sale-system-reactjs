@@ -11,8 +11,8 @@ const EditProduct = () => {
     const[products,setProducts]=useState("");
     const[image,setImage]=useState("");
     const navigate=useNavigate();
-    const exist = (code) =>{
-        const found = products.some(el => el.code === code);
+    const exist = (codee) =>{
+        const found = products.some(el => el.code === codee && el.code !== code);
         return found;
       }
     //Edit product ---> json file
