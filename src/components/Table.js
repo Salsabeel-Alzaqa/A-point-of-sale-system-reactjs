@@ -7,13 +7,13 @@ const Table = ({Products}) => {
       navigate("/products/detail/" + id);
     }
     //Edit button
-    const LoadEdit = (id) => {
+    const LoadEdit =  (id) => {
       navigate("/products/edit/" + id);
     }
     //Delete button
-    const RemoveProduct =  (id) => {
+    const RemoveProduct = async (id) => {
       if (window.confirm('Do you want to remove?')) {
-        fetch("http://localhost:8000/products/" + id, {
+        await fetch("http://localhost:8000/products/" + id, {
           method: "DELETE"
         }).then((res) => {
           console.log("Removed successfully")

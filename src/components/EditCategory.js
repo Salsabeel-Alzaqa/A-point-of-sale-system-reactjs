@@ -1,10 +1,11 @@
 import {useState,useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {useFormik } from "formik";
-const EditCategory = ({categories}) => {
+const EditCategory = () => {
     const { categoryID } = useParams();
     const [products, setProducts] = useState([]);
     const [category, setCategory] = useState("");
+    const [categories, setCategories] = useState([]);
     const navigate=useNavigate();
     //Edit category ---> json file
     const EditCategory = async(category)=>{
@@ -13,7 +14,7 @@ const EditCategory = ({categories}) => {
         headers:{"content-type":"application/json"},
         body:JSON.stringify(category)
       }).then((res)=>{
-        alert('Saved successfully.');
+        console.log("Saved")
         navigate('/categories');
       }).catch((err)=>{
         console.log(err.message)
@@ -32,20 +33,21 @@ const EditCategory = ({categories}) => {
         initialValues:{
             name:''
         },
-        onSubmit:async (values) =>{
+        onSubmit: (values) =>{
         if(categories.some(el => el.name === values.name))
         {
             alert("this category name is exist ,please try again!!");
         }
         else
         {
-            const arr =products.filter((item) => item.category === category);
-            arr.forEach(item => {
+            products.forEach(item => {
+                if(item.category === category){
                 const product={
                     ...item,
                     category:values.name
                 }
                 EditProduct(product,item.id);
+            }
             });
             EditCategory(values);
         }
@@ -63,10 +65,13 @@ const EditCategory = ({categories}) => {
         const fetchData = async () => {
           const response = await fetch("http://localhost:8000/products");
           const response2 = await fetch("http://localhost:8000/categories/" + categoryID);
+          const response3 = await fetch("http://localhost:8000/categories");
           const Data = await response.json();
           const Data2 = await response2.json();
+          const Data3 = await response3.json();
           setProducts(Data);
           setCategory(Data2.name);
+          setCategories(Data3);
         };
         fetchData();
       }, []);

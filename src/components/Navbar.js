@@ -10,6 +10,10 @@ const Navbar =() =>{
         };
         fetchData();
       }, [categories]);
+      const logout=()=>{
+        localStorage.removeItem("signUp")
+        window.location.reload()
+    }
     return(
         <nav className="nav">
         <ul className="nav__menu">
@@ -27,6 +31,7 @@ const Navbar =() =>{
                 <NavLink className="link" to={{pathname :"/filter"}} state={item.name}>{item.name}</NavLink></li>))}</ul>
         </li>
         </ul>
+        <button className='btn bi bi-box-arrow-in-right' onClick={logout} style={{color:'antiquewhite'}}> Logout</button>
       </nav>
     );
 }

@@ -3,8 +3,8 @@
     {
       "code": "12354",
       "name": "chocolate",
-      "category": "sweet",
-      "price": "3",
+      "category": "sweets",
+      "price": 9,
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 1
     },
@@ -27,18 +27,10 @@
     {
       "code": "1235",
       "name": "dooood",
-      "category": "sweet",
+      "category": "sweets",
       "price": "27",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 4
-    },
-    {
-      "code": "25554",
-      "name": "mskmvs",
-      "category": "sweet",
-      "price": "5",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 15
     },
     {
       "code": "5155155",
@@ -51,7 +43,7 @@
     {
       "code": "25554",
       "name": "mskmvs",
-      "category": "sweet",
+      "category": "sweets",
       "price": "5",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 12
@@ -59,7 +51,7 @@
     {
       "code": "25554",
       "name": "mskmvs",
-      "category": "sweet",
+      "category": "sweets",
       "price": "5",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 11
@@ -67,7 +59,7 @@
     {
       "code": "25554",
       "name": "mskmvs",
-      "category": "sweet",
+      "category": "sweets",
       "price": "5",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 9
@@ -75,7 +67,7 @@
     {
       "code": "25554",
       "name": "mskmvs",
-      "category": "sweet",
+      "category": "sweets",
       "price": "5",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 8
@@ -129,17 +121,9 @@
       "id": 54
     },
     {
-      "code": "45487",
-      "name": "tkrsgkrg",
-      "category": "",
-      "price": 125,
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 63
-    },
-    {
       "code": "45585",
       "name": "dkg;sgg",
-      "category": "fruit",
+      "category": "",
       "price": 7,
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 64
@@ -147,7 +131,7 @@
     {
       "code": "1255",
       "name": "lfgklgk",
-      "category": "",
+      "category": "sweets",
       "price": 8,
       "image": "https://avante.biz/wp-content/uploads/Sweet-Images/Sweet-Images-005.jpg",
       "id": 65
@@ -155,15 +139,55 @@
     {
       "code": "455788",
       "name": "soso",
-      "category": "nana",
+      "category": "",
       "price": 11,
       "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
       "id": 66
+    },
+    {
+      "code": "586",
+      "name": "hjhj",
+      "category": "games",
+      "price": 4,
+      "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
+      "id": 67
+    },
+    {
+      "code": "125",
+      "name": "sakawo",
+      "category": "jojo",
+      "price": 13,
+      "image": "https://avante.biz/wp-content/uploads/Sweet-Images/Sweet-Images-005.jpg",
+      "id": 68
+    },
+    {
+      "code": "12354",
+      "name": "dooood",
+      "category": "games",
+      "price": 15,
+      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "id": 69
+    }
+  ],
+  "users": [
+    {
+      "name": "salsa",
+      "id": 1,
+      "email": "salsabeel.ibrahem.alzaqa@gmail.com",
+      "password": "123456789",
+      "confpassword": "123456789"
+    },
+    {
+      "name": "bhjbjhbh",
+      "password": "147896352",
+      "email": "salsabeel.ibrahem@gmail.com",
+      "confpassword": "147896352",
+      "id": 2
     }
   ],
   "categories": [
     {
-      "name": "sweet",
+      "name": "sweets",
       "id": 485
     },
     {
@@ -175,95 +199,21 @@
       "id": 48519
     },
     {
-      "name": "fruit",
+      "name": "jojo",
       "id": 48520
     },
     {
-      "name": "nana",
+      "name": "hju",
       "id": 48521
-    },
-    {
-      "name": "soso",
-      "id": 48522
     }
   ],
   "carts": [
-    {
-      "name": "mvdsvmsdlv",
-      "id": 20,
-      "price": "4",
-      "quantity": "3",
-      "total": 12
-    },
-    {
-      "name": "mskmvs",
-      "id": 11,
-      "price": "5",
-      "quantity": "1",
-      "total": 5
-    },
-    {
-      "name": "mskmvs",
-      "id": 8,
-      "price": "5",
-      "quantity": "1",
-      "total": 5
-    },
-    {
-      "name": "mvdsvmsdlv",
-      "id": 62,
-      "price": "4",
-      "quantity": "1",
-      "total": 4
-    },
-    {
-      "name": "Home",
-      "id": 3,
-      "price": "1000",
-      "quantity": "2",
-      "total": 2000
-    },
-    {
-      "name": "mskmvs",
-      "id": 15,
-      "price": "5",
-      "quantity": "1",
-      "total": 5
-    },
-    {
-      "name": "mskmvs",
-      "id": 12,
-      "price": "5",
-      "quantity": "1",
-      "total": 5
-    },
     {
       "name": "dooood",
       "id": 4,
       "price": "27",
       "quantity": "1",
       "total": 27
-    },
-    {
-      "name": "steak",
-      "id": 2,
-      "price": "100",
-      "quantity": "1",
-      "total": 100
-    },
-    {
-      "name": "chocolate",
-      "id": 1,
-      "price": "3",
-      "quantity": "1",
-      "total": 3
-    },
-    {
-      "name": "mskmvs",
-      "id": 9,
-      "price": "5",
-      "quantity": "1",
-      "total": 5
     }
   ]
 }

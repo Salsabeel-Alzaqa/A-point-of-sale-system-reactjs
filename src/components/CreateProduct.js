@@ -1,7 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState,useEffect} from "react";
 import {useFormik } from "formik";
-const CreateProduct = ({categories}) => {
+const CreateProduct = () => {
     const navigate=useNavigate();
+    const [categories, setCategories] = useState([]);
     const AddProduct = async(products)=>{
         await fetch("http://localhost:8000/products",{
         method: "POST",
@@ -53,6 +55,14 @@ const CreateProduct = ({categories}) => {
                 return errors;
             }
         });
+        useEffect(() => {
+            const fetchData = async () => {
+              const response = await fetch("http://localhost:8000/categories");
+              const Data = await response.json();
+              setCategories(Data);
+            };
+            fetchData();
+          }, []);
     return (
     <form className="container" onSubmit={formik.handleSubmit} style={{width: '50%',paddingTop:'40px' }}>
         <div>
@@ -86,7 +96,7 @@ const CreateProduct = ({categories}) => {
         <div className="col-lg-12">
             <div className="form-group">
                 <label htmlFor="price">Price</label>
-                <input type="number" id='price' value={formik.values.price} onChange={formik.handleChange}onBlur={formik.handleBlur} className="form-control"></input>
+                <input type="number" id='price' value={formik.values.price} onChange={formik.handleChange} className="form-control"></input>
                 {formik.errors.price ? <div className="error">{formik.errors.price}</div> : null}
             </div>
         </div>

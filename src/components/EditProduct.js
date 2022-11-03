@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {useFormik } from "formik";
-const EditProduct = ({categories}) => {
+const EditProduct = () => {
     const { productID } = useParams();
+    const [categories, setCategories] = useState([]);
     const[code,setCode]=useState("");
     const[name,setName]=useState("");
     const[category,setCategory]=useState("");
@@ -24,14 +25,16 @@ const EditProduct = ({categories}) => {
     useEffect(() => {
         const fetchData = async () => {
           const response = await fetch("http://localhost:8000/products/" + productID);
+          const response2 = await fetch("http://localhost:8000/categories/");
           const Data = await response.json();
           setCode(Data.code);
           setName(Data.name);
           setCategory(Data.category);
           setPrice(Data.price);
           setImage(Data.image);
+          const Data2 = await response2.json();
+          setCategories(Data2);
         };
-    
         fetchData();
       }, []);
     const formik = useFormik(

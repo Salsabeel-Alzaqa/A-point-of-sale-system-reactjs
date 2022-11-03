@@ -1,7 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 import {useFormik } from "formik";
-const CreateCategory = ({categories}) => {
+import { useState,useEffect} from "react";
+const CreateCategory = () => {
     const navigate=useNavigate();
+    const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:8000/categories");
+      const Data = await response.json();
+      setCategories(Data);
+    };
+    fetchData();
+  }, []);
     const  AddCategory= async(category)=>{
           await fetch("http://localhost:8000/categories",{
           method: "POST",
@@ -17,7 +27,7 @@ const CreateCategory = ({categories}) => {
         initialValues:{
             name:''
         },
-        onSubmit:async (values) =>{
+        onSubmit:(values) =>{
         if(categories.some(el => el.name === values.name))
         {
             alert("this category name is exist ,please try again!!");
