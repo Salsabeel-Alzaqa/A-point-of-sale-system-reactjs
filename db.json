@@ -25,60 +25,12 @@
       "id": 3
     },
     {
-      "code": "1235",
-      "name": "dooood",
-      "category": "sweets",
-      "price": "27",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 4
-    },
-    {
       "code": "5155155",
       "name": "mscsmcs",
       "category": "games",
       "price": "19",
       "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
       "id": 13
-    },
-    {
-      "code": "25554",
-      "name": "mskmvs",
-      "category": "sweets",
-      "price": "5",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 12
-    },
-    {
-      "code": "25554",
-      "name": "mskmvs",
-      "category": "sweets",
-      "price": "5",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 11
-    },
-    {
-      "code": "25554",
-      "name": "mskmvs",
-      "category": "sweets",
-      "price": "5",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 9
-    },
-    {
-      "code": "25554",
-      "name": "mskmvs",
-      "category": "sweets",
-      "price": "5",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 8
-    },
-    {
-      "code": "25554",
-      "name": "mskmvs",
-      "category": "",
-      "price": "5",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 7
     },
     {
       "code": "5588484",
@@ -155,7 +107,7 @@
     {
       "code": "125",
       "name": "sakawo",
-      "category": "jojo",
+      "category": "",
       "price": 13,
       "image": "https://avante.biz/wp-content/uploads/Sweet-Images/Sweet-Images-005.jpg",
       "id": 68
@@ -183,6 +135,27 @@
       "email": "salsabeel.ibrahem@gmail.com",
       "confpassword": "147896352",
       "id": 2
+    },
+    {
+      "name": "vhgvhvhhv",
+      "password": "123456",
+      "email": "jnjknkjn@hhj.com",
+      "confpassword": "123456",
+      "id": 3
+    },
+    {
+      "name": "jnjnjn",
+      "password": "123456789",
+      "email": "jnjkjn@hhj.com",
+      "confpassword": "123456789",
+      "id": 4
+    },
+    {
+      "name": "kmkmm",
+      "password": "123456789",
+      "email": "jnjkn@hhj.com",
+      "confpassword": "123456789",
+      "id": 5
     }
   ],
   "categories": [
@@ -199,21 +172,24 @@
       "id": 48519
     },
     {
-      "name": "jojo",
+      "name": "per",
       "id": 48520
-    },
-    {
-      "name": "hju",
-      "id": 48521
     }
   ],
   "carts": [
     {
-      "name": "dooood",
-      "id": 4,
-      "price": "27",
+      "name": "chocolate",
+      "id": 1,
+      "price": 9,
       "quantity": "1",
-      "total": 27
+      "total": 9
+    },
+    {
+      "name": "steak",
+      "id": 2,
+      "price": "100",
+      "quantity": "1",
+      "total": 100
     }
   ]
 }

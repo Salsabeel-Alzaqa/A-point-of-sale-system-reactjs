@@ -8,8 +8,13 @@ const EditProduct = () => {
     const[name,setName]=useState("");
     const[category,setCategory]=useState("");
     const[price,setPrice]=useState("");
+    const[products,setProducts]=useState("");
     const[image,setImage]=useState("");
     const navigate=useNavigate();
+    const exist = (code) =>{
+        const found = products.some(el => el.code === code);
+        return found;
+      }
     //Edit product ---> json file
     const EditProduct = async(product)=>{
         await fetch("http://localhost:8000/products/"+ productID,{
@@ -26,6 +31,7 @@ const EditProduct = () => {
         const fetchData = async () => {
           const response = await fetch("http://localhost:8000/products/" + productID);
           const response2 = await fetch("http://localhost:8000/categories/");
+          const response3 = await fetch("http://localhost:8000/products/");
           const Data = await response.json();
           setCode(Data.code);
           setName(Data.name);
@@ -34,6 +40,8 @@ const EditProduct = () => {
           setImage(Data.image);
           const Data2 = await response2.json();
           setCategories(Data2);
+          const Data3 = await response3.json();
+          setProducts(Data3);
         };
         fetchData();
       }, []);
@@ -59,6 +67,9 @@ const EditProduct = () => {
                 }
                 if(!values.code){
                     errors.code='Required'
+                }else if(exist(values.code))
+                {
+                    errors.code='Already used'
                 }
                 if(!values.price){
                     errors.price='Required'
@@ -125,5 +136,4 @@ const EditProduct = () => {
     </form>
      );
 }
- 
 export default EditProduct;

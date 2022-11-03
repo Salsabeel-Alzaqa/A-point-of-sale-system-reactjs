@@ -4,17 +4,22 @@ import {useFormik } from "formik";
 const CreateProduct = () => {
     const navigate=useNavigate();
     const [categories, setCategories] = useState([]);
-    const AddProduct = async(products)=>{
+    const [products, setProducts] = useState([]);
+    const AddProduct = async(product)=>{
         await fetch("http://localhost:8000/products",{
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(products),
+        body: JSON.stringify(product),
       }).then((res)=>{
           alert('Saved successfully.')
           navigate('/');
         }).catch((err)=>{
           console.log(err.message)
         })}
+        const exist = (code) =>{
+            const found = products.some(el => el.code === code);
+            return found;
+          }
     const formik = useFormik(
         {
             initialValues:{
@@ -26,14 +31,8 @@ const CreateProduct = () => {
             },
             onSubmit:async (values) =>
             {
-                let name = values.name;
-                let code = values.code;
-                let category = values.category;
-                let price = values.price;
-                let image = values.image;
-                const products={code,name,category,price,image};
-                AddProduct(products);
-            formik.resetForm();  
+                AddProduct(values);
+                formik.resetForm();  
             },
             validate:values =>{
                 let errors ={};
@@ -42,6 +41,9 @@ const CreateProduct = () => {
                 }
                 if(!values.code){
                     errors.code='Required'
+                }else if(exist(values.code))
+                {
+                    errors.code='Already used'
                 }
                 if(!values.price){
                     errors.price='Required'
@@ -58,8 +60,11 @@ const CreateProduct = () => {
         useEffect(() => {
             const fetchData = async () => {
               const response = await fetch("http://localhost:8000/categories");
+              const response2 = await fetch("http://localhost:8000/products");
               const Data = await response.json();
               setCategories(Data);
+              const Data2 = await response2.json();
+              setProducts(Data2);
             };
             fetchData();
           }, []);
