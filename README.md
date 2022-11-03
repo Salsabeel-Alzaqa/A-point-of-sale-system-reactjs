@@ -9,10 +9,10 @@ In the project directory, you can run:
 ### `npm start`
 
 To run the app with json server : 
-### 'npm run dev' 
+### `npm run dev`
 
 To run json server :
-### 'json-server --watch db.json --port 8000'
+### `json-server --watch db.json --port 8000`
 
 
 
