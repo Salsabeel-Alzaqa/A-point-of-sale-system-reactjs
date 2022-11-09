@@ -1,175 +1,131 @@
 {
   "products": [
     {
-      "code": "1235",
-      "name": "chocolate",
-      "category": "sweets",
-      "price": 6,
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
+      "code": "123",
+      "name": "Cucumbers",
+      "category": "vegetables",
+      "price": 18,
+      "image": "https://post.healthline.com/wp-content/uploads/2020/09/AN88-Cucumbers-732x549-thumb-1-732x549.jpg",
       "id": 1
     },
     {
-      "code": "54545",
-      "name": "steak",
-      "category": "meat",
-      "price": "100",
-      "image": "https://www.tastingtable.com/img/gallery/15-ingredients-that-will-seriously-elevate-your-steak/intro-1663169111.webp",
+      "code": "124",
+      "name": "Coca cola",
+      "category": "drinks",
+      "price": 5,
+      "image": "https://assets.bizclikmedia.net/668/97f9523a35de8f43744dbbe4166bbf57:fc0f9157a3f57fc787e3679999ca29f2/shutterstock-196241660-2-jpeg.webp",
       "id": 2
     },
     {
-      "code": "4845548",
-      "name": "Home",
-      "category": "games",
-      "price": "1000",
-      "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
+      "code": "125",
+      "name": "beef ",
+      "category": "meats",
+      "price": 60,
+      "image": "https://cdn.britannica.com/68/143268-050-917048EA/Beef-loin.jpg",
       "id": 3
     },
     {
-      "code": "5155155",
-      "name": "mscsmcs",
-      "category": "games",
-      "price": "19",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 13
+      "code": "126",
+      "name": "Chicken ",
+      "category": "meats",
+      "price": 30,
+      "image": "https://images.heb.com/is/image/HEBGrocery/000313240?fit=constrain,1&wid=800&hei=800&fmt=jpg",
+      "id": 4
     },
     {
-      "code": "5588484",
-      "name": "mvdsvmsdlv",
-      "category": "games",
-      "price": "4",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 20
+      "code": "127",
+      "name": "Apple",
+      "category": "fruits",
+      "price": 5,
+      "image": "https://cdn.britannica.com/22/187222-050-07B17FB6/apples-on-a-tree-branch.jpg",
+      "id": 5
     },
     {
-      "code": "5588484",
-      "name": "mvdsvmsdlv",
-      "category": "games",
-      "price": "4",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 51
+      "code": "129",
+      "name": "Milk",
+      "category": "drinks",
+      "price": 10,
+      "image": "https://www.stonyfield.com/wp-content/uploads/2017/02/stonyfield-organic-milk-half-gallon-reduced-fat-500x500-1.png",
+      "id": 6
     },
     {
-      "code": "5588484",
-      "name": "mvdsvmsdlv",
-      "category": "games",
-      "price": "4",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 21
-    },
-    {
-      "code": "5588484",
-      "name": "mvdsvmsdlv",
-      "category": "games",
-      "price": "4",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 62
-    },
-    {
-      "code": "5588484",
-      "name": "mvdsvmsdlv",
-      "category": "games",
-      "price": "4",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 54
-    },
-    {
-      "code": "45585",
-      "name": "dkg;sgg",
-      "category": "unknown",
-      "price": 7,
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 64
-    },
-    {
-      "code": "1255",
-      "name": "lfgklgk",
-      "category": "sweets",
-      "price": 8,
-      "image": "https://avante.biz/wp-content/uploads/Sweet-Images/Sweet-Images-005.jpg",
-      "id": 65
-    },
-    {
-      "code": "455788",
-      "name": "soso",
-      "category": "games",
-      "price": 11,
-      "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
-      "id": 66
-    },
-    {
-      "code": "586",
-      "name": "hjhj",
-      "category": "games",
-      "price": 4,
-      "image": "https://www.lego.com/cdn/cs/set/assets/bltfb3ccae42fc241c7/10308.png",
-      "id": 67
-    },
-    {
-      "code": "125",
-      "name": "sakawo",
-      "category": "unknown",
-      "price": 13,
-      "image": "https://avante.biz/wp-content/uploads/Sweet-Images/Sweet-Images-005.jpg",
-      "id": 68
-    },
-    {
-      "code": "12354",
-      "name": "dooood",
-      "category": "games",
+      "code": "130",
+      "name": "Pumpkin",
+      "category": "vegetables",
       "price": 15,
-      "image": "https://cdn.shopify.com/s/files/1/0551/6060/2784/products/OG_576a5394-ba6b-4096-a4ff-e24d85533a36.png",
-      "id": 69
+      "image": "https://www.thespruce.com/thmb/zFtOsDrQP5pzEGFV_7BoYeXJBLg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/how-to-choose-carving-pumpkins-1403449-03-b29896bd3fa04574937cfde004e45dd5.jpg",
+      "id": 7
+    },
+    {
+      "code": "131",
+      "name": "Eggplant",
+      "category": "vegetables",
+      "price": 20,
+      "image": "https://cdn-prod.medicalnewstoday.com/content/images/articles/279/279359/two-eggplants-on-a-wooden-table.jpg",
+      "id": 8
+    },
+    {
+      "code": "134",
+      "name": "Corn",
+      "category": "vegetables",
+      "price": 9,
+      "image": "https://blog-images.pharmeasy.in/2022/07/25001247/21.jpg",
+      "id": 9
+    },
+    {
+      "code": "135",
+      "name": "Orange juice",
+      "category": "drinks",
+      "price": 15,
+      "image": "https://m.media-amazon.com/images/I/51VoGvKUWoL._SX300_SY300_QL70_FMwebp_.jpg",
+      "id": 10
+    },
+    {
+      "code": "138",
+      "name": "turkey ",
+      "category": "meats",
+      "price": 12,
+      "image": "https://images.eatthismuch.com/img/523965_audreymoll_ef9f1285-9d95-4d7c-89aa-122544ccb4dd.jpg",
+      "id": 11
+    },
+    {
+      "code": "139",
+      "name": "Banana",
+      "category": "fruits",
+      "price": 15,
+      "image": "https://cdn.shopify.com/s/files/1/0513/3785/5157/files/BANANA2_480x480.jpg",
+      "id": 12
     }
   ],
   "users": [
     {
-      "name": "salsa",
-      "id": 1,
-      "email": "salsabeel.ibrahem.alzaqa@gmail.com",
-      "password": "123456789",
-      "confpassword": "123456789"
-    },
-    {
-      "name": "bhjbjhbh",
-      "password": "147896352",
-      "email": "salsabeel.ibrahem@gmail.com",
-      "confpassword": "147896352",
-      "id": 2
-    },
-    {
-      "name": "vhgvhvhhv",
-      "password": "123456",
-      "email": "jnjknkjn@hhj.com",
-      "confpassword": "123456",
-      "id": 3
-    },
-    {
-      "name": "jnjnjn",
-      "password": "123456789",
-      "email": "jnjkjn@hhj.com",
-      "confpassword": "123456789",
-      "id": 4
-    },
-    {
-      "name": "kmkmm",
-      "password": "123456789",
-      "email": "jnjkn@hhj.com",
-      "confpassword": "123456789",
-      "id": 5
+      "name": "salsabeel",
+      "password": "12131400",
+      "email": "salsabeel.alzaqa@gmail.com",
+      "confpassword": "12131400",
+      "id": 1
     }
   ],
   "categories": [
     {
-      "name": "sweets",
-      "id": 485
+      "name": "vegetables",
+      "id": 1
     },
     {
-      "name": "meat",
-      "id": 48515
+      "name": "drinks",
+      "id": 2
     },
     {
-      "name": "games",
-      "id": 48519
+      "name": "meats",
+      "id": 3
+    },
+    {
+      "name": "sweet",
+      "id": 5
+    },
+    {
+      "name": "fruits",
+      "id": 6
     }
   ],
   "carts": []
