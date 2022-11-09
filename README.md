@@ -19,7 +19,7 @@ Open [http://localhost:8000/products](http://localhost:8000/products) to view pr
 
 If user does not exist            |  If email and password does not match
 :-------------------------:|:-------------------------:
-<img src="https://user-images.githubusercontent.com/107882635/200685388-06b63531-6aae-4255-9cf5-b9b0c140f1ad.png" width="500" height="250">  |  <img src="https://user-images.githubusercontent.com/107882635/200689640-2178a256-fb05-4010-b8e9-07bc36b33bbd.png" width="500" height="250">
+<img src="https://user-images.githubusercontent.com/107882635/200685388-06b63531-6aae-4255-9cf5-b9b0c140f1ad.png" width="500" height="250">  |  <img src="https://user-images.githubusercontent.com/107882635/200715140-ba3a2ff9-8e37-4d2d-83cc-69c9cc68013e.png" width="500" height="250">
 <p align="center">
 <img src="https://user-images.githubusercontent.com/107882635/200714005-3f81463a-ecb0-483d-8faf-109e1cb69b45.png">
 </p>
